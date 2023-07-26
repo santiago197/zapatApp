@@ -1,23 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sneakerView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="15dp"
     tools:context=".ui.home.HomeFragment">
 
+    <ImageView
+        android:id="@+id/sneakerDetailedImage"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_gravity="top"
+        android:layout_weight="1"
+        android:src="@drawable/adidas" />
+
+
     <TextView
-        android:id="@+id/text_home"
+        android:id="@+id/sneakerTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:padding="15dp"
+        android:text="Tenis Adidas para Hombre Running Response Runner U"
         android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Productos" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/sneakerDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:paddingBottom="15dp"
+        android:text="Recuerda que tienes 30 días para efectuar el cambio de tu calzado, los cuales deben estar en buen estado y con su caja original   "
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/btnComprar"
+        android:layout_width="240dp"
+        android:layout_height="15dp"
+        android:layout_weight="1"
+        android:gravity="bottom|center|fill"
+        android:text="@string/btn_comprar"
+        app:icon="@drawable/ic_add_shopping_cart" />
+
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="240dp"
+        android:layout_height="15dp"
+        android:layout_weight="1"
+        android:gravity="bottom|center|fill"
+        android:text="@string/btn_volver"
+        app:icon="?attr/actionModeCloseDrawable" />
+
+</LinearLayout>

@@ -22,4 +22,7 @@
         android:name="com.zapateria.zapatapp.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_sucursales"
         tools:layout="@layout/fragment_slideshow" />
+
+
+
 </navigation>
