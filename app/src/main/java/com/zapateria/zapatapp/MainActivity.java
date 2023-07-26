@@ -1,5 +1,6 @@
 package com.zapateria.zapatapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
@@ -20,6 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.zapateria.zapatapp.Adapters.SneakerAdapter;
 import com.zapateria.zapatapp.Modelo.Sneaker;
 import com.zapateria.zapatapp.databinding.ActivityMainBinding;
+import com.zapateria.zapatapp.ui.home.HomeFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -71,4 +73,6 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
 }
+

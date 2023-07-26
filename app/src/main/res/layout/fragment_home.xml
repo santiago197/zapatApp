@@ -37,14 +37,14 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:layout_weight="1"
-        android:paddingBottom="15dp"
+        android:padding="15dp"
         android:text="Recuerda que tienes 30 días para efectuar el cambio de tu calzado, los cuales deben estar en buen estado y con su caja original   "
         android:textAlignment="center" />
 
     <Button
         android:id="@+id/btnComprar"
         android:layout_width="240dp"
-        android:layout_height="15dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="bottom|center|fill"
         android:text="@string/btn_comprar"
@@ -53,7 +53,7 @@
     <Button
         android:id="@+id/btnVolver"
         android:layout_width="240dp"
-        android:layout_height="15dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="bottom|center|fill"
         android:text="@string/btn_volver"

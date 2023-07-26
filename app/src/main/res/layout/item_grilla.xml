@@ -1,27 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<!-- res/layout/grid_item_layout.xml -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:padding="8dp">
 
     <ImageView
         android:id="@+id/sneakerImg"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:layout_gravity="top"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/adidas" />
+        android:src="@drawable/adidas" />
 
     <TextView
         android:id="@+id/sneakerName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
+        android:layout_below="@id/sneakerImg"
+        android:layout_marginTop="8dp"
         android:background="@color/purple_500"
-        android:gravity="bottom|center"
         android:padding="16dp"
         android:text="TextView"
         android:textAlignment="center"
         android:textColor="@color/white" />
 
-</FrameLayout>
+</RelativeLayout>

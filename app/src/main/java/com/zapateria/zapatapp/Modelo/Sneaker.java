@@ -40,11 +40,11 @@ public class Sneaker {
 
     public static Sneaker[] ITEMS = {
             new Sneaker(1,"Adidas", R.drawable.adidas),
-            new Sneaker(2,"Adidas", R.drawable.adidas),
-            new Sneaker(3,"Adidas", R.drawable.adidas),
-            new Sneaker(4,"Adidas", R.drawable.adidas),
-            new Sneaker(5,"Adidas", R.drawable.adidas),
-            new Sneaker(6,"Adidas", R.drawable.adidas),
+            new Sneaker(2,"Adidas NMD R1", R.drawable.adidas_nmd),
+            new Sneaker(3,"Runner", R.drawable.runner),
+            new Sneaker(4,"Under Armour", R.drawable.under_armour),
+            new Sneaker(5,"Nike", R.drawable.nike),
+            new Sneaker(6,"Skeachers", R.drawable.skeachers),
             new Sneaker(7,"Adidas", R.drawable.adidas),
             new Sneaker(8,"Adidas", R.drawable.adidas),
             new Sneaker(9,"Adidas", R.drawable.adidas),
