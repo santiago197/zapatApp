@@ -23,6 +23,12 @@
         android:label="@string/menu_sucursales"
         tools:layout="@layout/fragment_slideshow" />
 
+    <fragment
+        android:id="@+id/nav_productos"
+        android:name="com.zapateria.zapatapp.Fragments.ProductosFragment"
+        android:label="Productos"
+        tools:layout="@layout/listado_productos" />
+
 
 
 </navigation>

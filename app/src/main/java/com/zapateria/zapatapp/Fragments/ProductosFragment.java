@@ -4,18 +4,22 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.zapateria.zapatapp.Adapters.SneakerAdapter;
 import com.zapateria.zapatapp.Modelo.Sneaker;
 import com.zapateria.zapatapp.R;
 
 public class ProductosFragment extends Fragment {
 
-    private GridView grilla;
+    private GridView gridView;
+    private SneakerAdapter sneakerAdapter;
 
     public ProductosFragment(){
 
@@ -40,7 +44,19 @@ public class ProductosFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        grilla = getView().findViewById(R.id.grilla);
+        gridView = getView().findViewById(R.id.grilla);
+        sneakerAdapter = new SneakerAdapter(getContext());
+        gridView.setAdapter(sneakerAdapter);
+
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Sneaker item = (Sneaker) adapterView.getItemAtPosition(i);
+
+                Toast.makeText(getActivity().getApplicationContext(), "Se selecciono: " + item.getName(), Toast.LENGTH_LONG).show();
+            }
+        });
+
 
     }
 }
