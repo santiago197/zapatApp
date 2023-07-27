@@ -13,6 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ZapatApp"
         tools:targetApi="31" >
+        <activity android:name=".SneakerDetailActivity"
+            android:exported="false"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -28,7 +30,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity android:name=".SneakerActivity"
+        <activity android:name=".SneakerDetailActivity"
             android:exported="false" />
 
 

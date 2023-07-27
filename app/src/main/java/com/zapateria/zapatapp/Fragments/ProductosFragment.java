@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import com.zapateria.zapatapp.Adapters.SneakerAdapter;
 import com.zapateria.zapatapp.Modelo.Sneaker;
 import com.zapateria.zapatapp.R;
+import com.zapateria.zapatapp.SneakerDetailActivity;
 import com.zapateria.zapatapp.ui.home.HomeFragment;
 
 public class ProductosFragment extends Fragment {
@@ -55,18 +56,18 @@ public class ProductosFragment extends Fragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Sneaker item = (Sneaker) adapterView.getItemAtPosition(i);
 
-                /*if(item.getId()==1){
-                    Intent intent = new Intent(getActivity(), HomeFragment.class);
-                    detalleProducto();
-                }*/
+                Intent intent = new Intent(getActivity(), SneakerDetailActivity.class);
+                intent.putExtra("sneaker_id",item.getId());
+                intent.putExtra("sneaker_title",item.getName());
+                intent.putExtra("sneaker_description",item.getDescription());
+                intent.putExtra("sneaker_img",item.getIdDrawable());
+                startActivity(intent);
+
                 Toast.makeText(getActivity().getApplicationContext(), "Se selecciono: " + item.getName(), Toast.LENGTH_LONG).show();
             }
         });
 
 
     }
-    private void detalleProducto(){
-        Intent intent = new Intent(getActivity(), HomeFragment.class);
-        startActivity(intent);
-    }
+
 }
