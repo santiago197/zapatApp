@@ -7,6 +7,12 @@
 
     <fragment
         android:id="@+id/nav_home"
+        android:name="com.zapateria.zapatapp.Fragments.ProductosFragment"
+        android:label="Productos"
+        tools:layout="@layout/listado_productos" />
+
+    <fragment
+        android:id="@+id/nav_detalle"
         android:name="com.zapateria.zapatapp.ui.home.HomeFragment"
         android:label="@string/detalle_producto"
         tools:layout="@layout/fragment_home" />
@@ -18,16 +24,11 @@
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.zapateria.zapatapp.ui.slideshow.SlideshowFragment"
+        android:id="@+id/nav_sucursales"
+        android:name="com.zapateria.zapatapp.Fragments.SucursalesFragment"
         android:label="@string/menu_sucursales"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/sucursales_layout" />
 
-    <fragment
-        android:id="@+id/nav_productos"
-        android:name="com.zapateria.zapatapp.Fragments.ProductosFragment"
-        android:label="Productos"
-        tools:layout="@layout/listado_productos" />
 
 
 

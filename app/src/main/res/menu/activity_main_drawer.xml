@@ -4,12 +4,13 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+
         <item
-            android:id="@+id/nav_productos"
+            android:id="@+id/nav_home"
             android:icon="@drawable/ic_shopping_bag"
             android:title="@string/menu_productos" />
         <item
-            android:id="@+id/nav_home"
+            android:id="@+id/nav_detalle"
             android:icon="@drawable/ic_shopping_bag"
             android:title="@string/detalle_producto" />
         <item
@@ -17,7 +18,7 @@
             android:icon="@drawable/ic_home_repair_service"
             android:title="@string/menu_servicios" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_sucursales"
             android:icon="@drawable/ic_store"
             android:title="@string/menu_sucursales" />
 
