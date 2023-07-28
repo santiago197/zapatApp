@@ -34,7 +34,7 @@ public class SneakerDetailActivity extends AppCompatActivity {
         String sneaker_title = getIntent().getExtras().getString("sneaker_title");
 
         String sneaker_description = getIntent().getExtras().getString("sneaker_description");
-        String sneaker_price= getIntent().getExtras().getString("sneaker_price");
+
 
 
         sneakerImg = (ImageView) findViewById(R.id.sneakerDetailedImage);
@@ -45,7 +45,7 @@ public class SneakerDetailActivity extends AppCompatActivity {
         sneakerImg.setImageResource(sneaker_drawable);
         sneakerTitle.setText(sneaker_title);
         sneakerDescription.setText(sneaker_description);
-        sneakerPrice.setText(sneaker_price);
+
 
         btnComprar = (Button) findViewById(R.id.btnComprar);
         btnVolver  = (Button) findViewById(R.id.btnVolver);
@@ -54,7 +54,7 @@ public class SneakerDetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 DbCarrito dbCarrito = new DbCarrito(SneakerDetailActivity.this);
-                long idSneaker = dbCarrito.agregarProductoCarrito(sneakerTitle.toString(),sneakerDescription.toString(),sneakerPrice.toString());
+                long idSneaker = dbCarrito.agregarProductoCarrito(sneakerTitle.toString(),sneakerDescription.toString(),sneaker_drawable);
                 if(idSneaker>0){
                     Toast.makeText(getApplicationContext(),"Producto agregado al carrito", Toast.LENGTH_SHORT).show();
                 }else{
