@@ -10,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.zapateria.zapatapp.R;
-import com.zapateria.zapatapp.Fragments.placeholder.PlaceholderContent;
 
 /**
  * A fragment representing a list of Items.

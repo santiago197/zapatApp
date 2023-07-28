@@ -74,6 +74,9 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item){
         if(item.getItemId()==R.id.crear_db){
             formularioCliente();
+        }else if(item.getItemId()==R.id.login){
+            Intent intent= new Intent(this,LoginActivity.class);
+            startActivity(intent);
         }
         return  super.onOptionsItemSelected(item);
     }

@@ -31,13 +31,26 @@
         android:layout_height="wrap_content"
         android:hint="Digite el nombre de usuario" />
     <TextView
+        android:id="@+id/txtCorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Correo" />
+
+    <EditText
+        android:id="@+id/editCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite el correo electronico"
+        android:inputType="textEmailAddress" />
+    <TextView
         android:id="@+id/txtContraseña"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Contraseña" />
+        android:text="Contraseña"
+        android:inputType="textPassword" />
 
     <EditText
-        android:id="@+id/txtPassword"
+        android:id="@+id/editPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Digite la contraseña" />
@@ -49,13 +62,13 @@
         android:text="Conectar BD" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnGuardarRegistro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Guardar Registro" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnListaRegistros"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Lista Registros" />
