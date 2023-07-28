@@ -5,21 +5,20 @@ import android.os.Bundle;
 import android.os.AsyncTask;
 import android.os.Handler;
 import android.content.Intent;
-
+import android.view.View;
+import android.widget.ProgressBar;
 
 
 public class SplashActivity extends Activity {
+    private ProgressBar pb;
     private static int SPLASH_DURATION = 5000;
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        // Iniciar AsyncTask para cargar datos en segundo plano
+        pb = (ProgressBar)findViewById(R.id.progressBar);
         new LoadDataAsyncTask().execute();
 
-        // Usar un Handler para redirigir al usuario a la actividad principal después del tiempo del splash
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -28,6 +27,7 @@ public class SplashActivity extends Activity {
         }, SPLASH_DURATION);
     }
     private void startMainActivity() {
+        pb.setVisibility(View.INVISIBLE);
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish(); // Cierra esta actividad para que el usuario no pueda volver al splash screen presionando el botón "Atrás"
@@ -35,9 +35,13 @@ public class SplashActivity extends Activity {
 
     private class LoadDataAsyncTask extends AsyncTask<Void, Void, Void>{
         @Override
+        protected void onPreExecute(){
+            pb.setVisibility(View.VISIBLE);
+        }
+        @Override
         protected Void doInBackground(Void... voids) {
             try {
-                Thread.sleep(3000);
+                Thread.sleep(5000);
                 ;
             } catch (InterruptedException e) {
                 e.printStackTrace();

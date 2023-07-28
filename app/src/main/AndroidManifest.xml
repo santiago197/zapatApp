@@ -13,10 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ZapatApp"
         tools:targetApi="31" >
-        <activity android:name=".SneakerDetailActivity"
-            android:exported="false"/>
+
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.ZapatApp.NoActionBar" >
@@ -30,9 +29,14 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ZapatApp.NoActionBar" >
+        </activity>
         <activity android:name=".SneakerDetailActivity"
-            android:exported="false" />
-
+            android:exported="false"/>
 
     </application>
 
