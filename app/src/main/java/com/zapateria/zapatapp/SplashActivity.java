@@ -14,7 +14,7 @@ import android.widget.ProgressBar;
 public class SplashActivity extends Activity {
     private ProgressBar pb;
     private ImageView logo;
-    private static int SPLASH_DURATION = 6000;
+    private static int SPLASH_DURATION = 5000;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
@@ -48,8 +48,7 @@ public class SplashActivity extends Activity {
         @Override
         protected Void doInBackground(Void... voids) {
             try {
-                Thread.sleep(SPLASH_DURATION);
-                ;
+                Thread.sleep(3000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
