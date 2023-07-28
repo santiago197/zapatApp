@@ -1,10 +1,13 @@
 package com.zapateria.zapatapp;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.Toast;
 
@@ -21,6 +24,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.zapateria.zapatapp.Adapters.SneakerAdapter;
 import com.zapateria.zapatapp.Modelo.Sneaker;
 import com.zapateria.zapatapp.databinding.ActivityMainBinding;
+import com.zapateria.zapatapp.db.DbHelper;
 import com.zapateria.zapatapp.ui.home.HomeFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -29,12 +33,14 @@ public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
 
+    Button btnCrearDb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
 
         setSupportActionBar(binding.appBarMain.toolbar);
         binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
@@ -64,6 +70,21 @@ public class MainActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
+    }
+    public boolean onOptionsItemSelected(MenuItem item){
+        if(item.getItemId()==R.id.crear_db){
+            formularioCliente();
+        }
+        return  super.onOptionsItemSelected(item);
+    }
+    private void formularioCliente(){
+        DbHelper dbHelper = new DbHelper(MainActivity.this);
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        if(db != null){
+            Toast.makeText(MainActivity.this, "Base de datos creada éxitosamente", Toast.LENGTH_LONG).show();
+        }else{
+            Toast.makeText(MainActivity.this, "Error al crear la Base de datos", Toast.LENGTH_LONG).show();
+        }
     }
 
 

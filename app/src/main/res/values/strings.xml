@@ -6,6 +6,7 @@
     <string name="nav_header_subtitle">correo@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_cerrarsesion">Cerrar sesión</string>
+    <string name="action_crearbd">CCrear BD</string>
 
     <string name="detalle_producto">Detalle del producto</string>
     <string name="menu_productos">Productos</string>

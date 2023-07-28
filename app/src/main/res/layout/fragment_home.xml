@@ -32,6 +32,14 @@
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/sneakerPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="$250.000" />
+
+    <TextView
         android:id="@+id/sneakerDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
