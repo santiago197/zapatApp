@@ -1,5 +1,6 @@
 package com.zapateria.zapatapp;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -39,8 +40,8 @@ public class LoginActivity extends AppCompatActivity {
         btnGetRegistros.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(LoginActivity.this, "ACAAAA", Toast.LENGTH_SHORT).show();
-                System.out.println("HOA MUNDO");
+                Intent intent = new Intent(getApplicationContext(),ListarUsuarios.class);
+                startActivity(intent);
             }
         });
         btnConectarDB.setOnClickListener(new View.OnClickListener() {
@@ -58,7 +59,6 @@ public class LoginActivity extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(LoginActivity.this, "INTENTOmente", Toast.LENGTH_LONG).show();
                 try {
                     DbUsuarios dbUsuarios = new DbUsuarios(LoginActivity.this);
                     String nombre = textNombre.getText().toString();
